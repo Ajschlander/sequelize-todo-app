@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Todo List App</title>
-
+    <title>Todo - Express</title>
+    <!-- Latest compiled and minified CSS & JS -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
 
+<body>
     <div class="ui fixed menu">
         <div class="header item">
             Todo List App
@@ -20,9 +19,9 @@
     <form class="ui form container">
         <div class="field">
             <label>What would you like to get done?</label>
-            <input type="text" name="item" id="todo-item" placeholder="Go for a run">
+            <input type="text" name="todo-item" id="todo-item" placeholder="Go for a run">
         </div>
-        <button class="ui button green" type="submit">Submit</button>
+        <button class="ui button green" id="add-todo" type="submit">Add</button>
     </form>
 
     <div class="ui grid container">
@@ -35,6 +34,10 @@
             </div>
         </div>
     </div>
-    
+    <!-- Custom Script -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/todo.js" type="text/javascript"></script>
+
 </body>
+
 </html>
