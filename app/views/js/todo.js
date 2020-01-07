@@ -16,6 +16,13 @@ const addTodoItem = () => {
     }
 }
 
+for(let i = 0; i < checkDoneBtnArr.length; i++){
+    const checkDoneBtn = checkDoneBtnArr[i];
+    checkDoneBtn.addEventListener("click", () => {
+        
+    });
+}
+
 addBtn.addEventListener("click", () => {
     addTodoItem();
 });
