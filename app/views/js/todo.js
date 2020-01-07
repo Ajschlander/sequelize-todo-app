@@ -1,4 +1,5 @@
 const addBtn = document.getElementById("add-todo");
+const checkDoneBtnArr = document.querySelectorAll("#done-check");
 
 const addTodoItem = () => {
     const todoItem = document.getElementById("todo-item");
@@ -6,7 +7,7 @@ const addTodoItem = () => {
         alert("Please enter a todo item");
     }
     else {
-        axios.post("/api/todos", {
+        axios.post("/", {
             text: todoItem.value,
             isDone: false
         }).then( (response) => {
@@ -18,18 +19,3 @@ const addTodoItem = () => {
 addBtn.addEventListener("click", () => {
     addTodoItem();
 });
-
-const getTodos = async () => {
-    try {
-        let res = await axios.get("/api/todos");
-        let todos = res.data;
-        return todos;
-    }
-    catch(err){
-        console.log(err);
-    }
-}
-
-const updatePage = () => {
-    
-}

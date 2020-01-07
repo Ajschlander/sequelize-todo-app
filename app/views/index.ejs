@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Todo - Express</title>
     <!-- Latest compiled and minified CSS & JS -->
+    <script src="https://kit.fontawesome.com/2ceed62c3c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -25,12 +26,25 @@
     </form>
 
     <div class="ui grid container">
-        <div class="six column row">
+        <div class="four column row">
             <div class="left floated column">
-                Left column
+                <div class="ui divided items">
+                    <% notDoneTodos.forEach(function(todo){ %>
+                    <div class="item">
+                        <p class="todo-text"><%= todo.text %></p>
+                        <button class="ui inverted red button" id="done-check"><i class="fas fa-check"></i></button>
+                    </div>
+                    <% }); %>
+                </div>
             </div>
             <div class="right floated column">
-                Right column
+                <div class="ui divided items">
+                    <% doneTodos.forEach(function(todo){ %>
+                    <div class="item">
+                        <p class="done-todo-text"><%= todo.text %></p>
+                    </div>
+                    <% }); %>
+                </div>
             </div>
         </div>
     </div>

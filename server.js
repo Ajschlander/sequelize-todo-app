@@ -19,7 +19,11 @@ app.use(express.urlencoded({
 app.use(express.json());
 
 // Static directory
-app.use(express.static("./app/public"));
+app.use(express.static("./app/views"));
+
+app.set("views", "./app/views");
+
+app.set("view engine", "ejs");
 
 // Routes
 // =============================================================

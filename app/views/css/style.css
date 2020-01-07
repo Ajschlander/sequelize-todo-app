@@ -1,0 +1,16 @@
+.ui.form {
+    margin-top: 7rem;
+}
+
+.ui.grid {
+    margin-top: 5rem;
+}
+
+p {
+    padding-right: 2rem;
+    font-size: 18pt;
+}
+
+.done-todo-text {
+    text-decoration: line-through;
+}
