@@ -26,22 +26,15 @@
     </form>
 
     <div class="ui grid container">
-        <div class="four column row">
+        <div class="one column row">
             <div class="left floated column">
                 <div class="ui divided items">
                     <% notDoneTodos.forEach(function(todo){ %>
                     <div class="item">
-                        <p class="todo-text"><%= todo.text %></p>
-                        <button class="ui inverted red button" id="done-check"><i class="fas fa-check"></i></button>
-                    </div>
-                    <% }); %>
-                </div>
-            </div>
-            <div class="right floated column">
-                <div class="ui divided items">
-                    <% doneTodos.forEach(function(todo){ %>
-                    <div class="item">
-                        <p class="done-todo-text"><%= todo.text %></p>
+                        <form id="delete" action="/todos/<%= todo.id %>?_method=DELETE" method="POST">
+                            <p class="todo-text"><%= todo.text %></p>
+                            <button class="ui inverted red button" id="done-check"><i class="fas fa-check"></i></button>
+                        </form>
                     </div>
                     <% }); %>
                 </div>

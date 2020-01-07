@@ -17,6 +17,17 @@ module.exports = function (app) {
         });
     });
 
+    // DESTROY ROUTE
+    app.delete("/todos/:id", (req, res) => {
+        db.Todo.destroy({
+            where: {
+                id: req.params.id
+            }
+        }).then(() => {
+            res.redirect("/");
+        })
+    });
+
     
     
 };
